@@ -1,0 +1,7 @@
+myform.form:
+  path: '/myform'
+  defaults:
+    _title: 'My Input Form'
+    _form: '\Drupal\my_form\Form\MyForm'
+  requirements:
+    _permission: 'access content'

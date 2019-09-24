@@ -1,0 +1,6 @@
+name: Form Input Module
+description: Input Form
+package: Custom
+
+type: module
+core: 8.x
