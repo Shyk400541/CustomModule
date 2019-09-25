@@ -52,32 +52,26 @@ class MyForm extends FormBase {
 
 		if(empty($form_state->getValue('first_name'))){
 		$form_state->setErrorByName('first_name', $this->t('Field "First Name" must be not empty'));
-		return;
 		}
 
 		if(empty($form_state->getValue('last_name'))){
 		$form_state->setErrorByName('last_name', $this->t('Field "Last Name" must be not empty'));
-		return;
 		}
 
 		if(empty($form_state->getValue('subject'))){
 		$form_state->setErrorByName('subject', $this->t('Field "Subject" must be not empty'));
-		return;
 		}
 
 		if(empty($form_state->getValue('message'))){
 		$form_state->setErrorByName('message', $this->t('Field "Message" must be not empty'));
-		return;
 		}
 
 		if(empty($form_state->getValue('email'))){
 		$form_state->setErrorByName('email', $this->t('Field "Email" must be not empty'));
-		return;
 		}
 
 		else if((filter_var($form_state->getValue('email'), FILTER_VALIDATE_EMAIL)) == FALSE){
 			$form_state->setErrorByName('email', $this->t('Your email is incorrect'));
-			return;
 		}
 		//$this->messenger()->addStatus($this->t('Your email is @email',['@email'=>$form_state->getValue('email')]));
 	}
